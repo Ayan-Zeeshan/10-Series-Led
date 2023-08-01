@@ -12,7 +12,7 @@ int Led9 = 10;
 int Led10 = 11;
 
 void setup(){
-pinMode(PM, INPUT);
+  pinMode(PM, INPUT);
   pinMode(Led, OUTPUT);
   pinMode(Led2, OUTPUT);
   pinMode(Led3, OUTPUT);
@@ -27,7 +27,7 @@ pinMode(PM, INPUT);
 }
 
 void loop(){
-value = analogRead(PM);
+  value = analogRead(PM);
   Serial.println(value);
   int brightness = map(value,  0 , 1023 , 0, 255);
   analogWrite(Led, brightness);
